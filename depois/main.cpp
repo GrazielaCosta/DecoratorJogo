@@ -20,7 +20,7 @@ class PersonagemDecorator : public Personagem {
 
 public:
     PersonagemDecorator(Personagem& personagem) : personagem(personagem) {}
-
+    
     int PoderDeAtaque() const override {
         return personagem.PoderDeAtaque();
     }
@@ -30,7 +30,7 @@ public:
 class PocaoDecorator : public PersonagemDecorator {
     public:
         PocaoDecorator(Personagem& personagem) : PersonagemDecorator(personagem) {}
-
+        
         int PoderDeAtaque() const override {
             return personagem.PoderDeAtaque() + 2;
         }
@@ -71,7 +71,7 @@ int main() {
     
     PocaoDecorator personagemComPocao(basico);
     EspadaDecorator personagemComPocaoEEspada(personagemComPocao);
-    EncantamentoDecorator personagemComEspadaEEncantamento(espada);
+    EncantamentoDecorator personagemComEspadaEEncantamento(espada); 
     EncantamentoDecorator personagemCompleto(personagemComPocaoEEspada);
 
     cout << "Personagem com espada e encantamento: " << personagemComEspadaEEncantamento.PoderDeAtaque() << endl;

@@ -25,7 +25,7 @@ class PersonagemComEspada {
 };
 
 
-class PersonagemComEncatamento {
+class PersonagemComEncantamento {
     public:
     int PoderDeAtaque() {
         return 18;
@@ -36,7 +36,7 @@ int main() {
     PersonagemBasico personagem1;
     PersonagemComEspada personagem2;
     PersonagemComPocao personagem3;
-    PersonagemComEncatamento personagem4;
+    PersonagemComEncantamento personagem4;
 
 
     cout << "Personagem basico: " << personagem1.PoderDeAtaque() << endl;
@@ -49,4 +49,6 @@ int main() {
 
     
     cout << "Personagem com encatamento: " << personagem4.PoderDeAtaque() << endl;
+
+    return 0;
 }
