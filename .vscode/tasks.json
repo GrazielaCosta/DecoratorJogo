@@ -1,0 +1,28 @@
+
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Decorator - Módulos",
+            "type": "shell",
+            "command": "powershell",
+            "args": [
+                "-NoProfile",
+                "-Command",
+                "g++ modulos/main.cpp modulos/personagem.cpp modulos/decorators.cpp -o modulos/personagem.exe; if ($LASTEXITCODE -eq 0) { .\\modulos\\personagem.exe }"
+            ],
+            "problemMatcher": []
+        },
+        {
+            "label": "Decorator - Classes Separadas",
+            "type": "shell",
+            "command": "powershell",
+            "args": [
+                "-NoProfile",
+                "-Command",
+                "g++ classes_separadas/Personagem.cpp classes_separadas/PersonagemBasico.cpp classes_separadas/PersonagemDecorator.cpp classes_separadas/PocaoDecorator.cpp classes_separadas/EspadaDecorator.cpp classes_separadas/EncantamentoDecorator.cpp classes_separadas/main.cpp -o classes_separadas/personagem.exe; if ($LASTEXITCODE -eq 0) { .\\classes_separadas\\personagem.exe }"
+            ],
+            "problemMatcher": []
+        }
+    ]
+}
