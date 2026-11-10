@@ -32,11 +32,19 @@ class PersonagemComEncantamento {
     }
 };
 
+class PersonagemCompleto {
+    public:
+    int PoderDeAtaque() {
+        return 25;
+    }
+};
+
 int main() {
     PersonagemBasico personagem1;
     PersonagemComEspada personagem2;
     PersonagemComPocao personagem3;
     PersonagemComEncantamento personagem4;
+    PersonagemCompleto personagem5;
 
 
     cout << "Personagem basico: " << personagem1.PoderDeAtaque() << endl;
@@ -48,7 +56,10 @@ int main() {
     cout << "Personagem com espada: " << personagem2.PoderDeAtaque() << endl;
 
     
-    cout << "Personagem com encatamento: " << personagem4.PoderDeAtaque() << endl;
+    cout << "Personagem com encantamento: " << personagem4.PoderDeAtaque() << endl;
+
+    
+    cout << "Personagem completo (com pocao, espada e encantamento): " << personagem5.PoderDeAtaque() << endl;
 
     return 0;
 }

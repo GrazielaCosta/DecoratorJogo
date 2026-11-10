@@ -22,7 +22,7 @@ int main() {
 
     EncantamentoDecorator encantamento(espada);
 
-    cout << "Personagem completo: "
+    cout << "Personagem completo (com pocao, espada e encantamento): "
          << encantamento.PoderDeAtaque() << endl;
 
     return 0;

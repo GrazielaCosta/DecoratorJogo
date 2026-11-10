@@ -76,7 +76,7 @@ int main() {
 
     cout << "Personagem com espada e encantamento: " << personagemComEspadaEEncantamento.PoderDeAtaque() << endl;
 
-    cout << "Personagem com pocao, espada e encantamento: " << personagemCompleto.PoderDeAtaque() << endl;
+    cout << "Personagem completo (com pocao, espada e encantamento): " << personagemCompleto.PoderDeAtaque() << endl;
     
     return 0;
 }
