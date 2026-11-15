@@ -41,7 +41,7 @@ DecoratorJogo/
 │   ├── personagem.h
 │   ├── personagem.cpp
 │   └── main.cpp
-├── classes_separadas/
+├── separacao_classes/
 │   ├── Personagem.h
 │   ├── Personagem.cpp
 │   ├── PersonagemBasico.h
@@ -55,8 +55,6 @@ DecoratorJogo/
 │   ├── EncantamentoDecorator.h
 │   ├── EncantamentoDecorator.cpp
 │   └── main.cpp
-├── depois/
-│   └── main.cpp
 ├── diagrama_slides/
 ├── .gitattributes
 ├── .gitignore
@@ -68,7 +66,7 @@ DecoratorJogo/
 - `antes/`: contém a implementação ingênua, com as classes reunidas em um único arquivo.
 - `depois/`: contém a implementação utilizando o padrão Decorator, também organizada em um único arquivo.
 - `modulos/`: contém a implementação com as classes agrupadas em módulos, separando declarações e implementações.
-- `classes_separadas/`: contém a implementação com cada classe organizada individualmente em arquivos `.h` e `.cpp`.
+- `separacao_classes/`: contém a implementação com cada classe organizada individualmente em arquivos `.h` e `.cpp`.
 - `.vscode/`: contém o arquivo `tasks.json`, utilizado para configurar a compilação e execução das implementações pelo Visual Studio Code.
 - `diagrama_slides/`: contém os diagramas UML utilizados na apresentação do trabalho.
 
@@ -132,18 +130,18 @@ Executar no Windows:
 Compilar:
 
 ```bash
-g++ classes_separadas/Personagem.cpp classes_separadas/PersonagemBasico.cpp classes_separadas/PersonagemDecorator.cpp classes_separadas/PocaoDecorator.cpp classes_separadas/EspadaDecorator.cpp classes_separadas/EncantamentoDecorator.cpp classes_separadas/main.cpp -o classes_separadas/personagem.exe
+g++ separacao_classes/Personagem.cpp separacao_classes/PersonagemBasico.cpp separacao_classes/PersonagemDecorator.cpp separacao_classes/PocaoDecorator.cpp separacao_classes/EspadaDecorator.cpp separacao_classes/EncantamentoDecorator.cpp separacao_classes/main.cpp -o separacao_classes/personagem.exe
 ```
 
 Executar no Windows:
 
 ```powershell
-.\classes_separadas\personagem.exe
+.\separacao_classes\personagem.exe
 ```
 
 ## Execução pelo Visual Studio Code
 
-O projeto também possui uma configuração de tarefas no arquivo `.vscode/tasks.json`, permitindo compilar e executar as implementações organizadas em módulos e com classes separadas diretamente pelo Visual Studio Code.
+O projeto também possui uma configuração de tarefas no arquivo `.vscode/tasks.json`, permitindo compilar e executar as implementações organizadas em módulos e com separação de classes diretamente pelo Visual Studio Code.
 
 Para utilizar:
 
@@ -152,7 +150,7 @@ Para utilizar:
 3. Pesquisar `Tasks: Run Task`.
 4. Selecionar a implementação desejada:
    - `Decorator - Módulos`
-   - `Decorator - Classes Separadas`
+   - `Decorator - Separação classes`
 
 ## Resultados esperados
 
