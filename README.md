@@ -1,8 +1,8 @@
 # DecoratorJogo
 
 Padrões de Projeto (Decorator - Estrutural) em C++.
-Este projeto foi criado como parte da disciplina de Paradigmas de Programação do curso de Ciência da Computação do Instituto Federal de Goiás (IFG).
 
+Este projeto foi criado como parte da disciplina de Paradigmas de Programação do curso de Ciência da Computação do Instituto Federal de Goiás (IFG).
 
 ## Objetivo
 
@@ -18,21 +18,59 @@ O personagem possui um poder de ataque básico, que pode ser incrementado com di
 - **Espada:** adiciona 5 pontos de ataque.
 - **Encantamento:** adiciona 8 pontos de ataque.
 
-O projeto apresenta duas implementações: uma solução ingênua, que utiliza classes específicas para cada configuração, e uma solução com o padrão Decorator, que permite combinar comportamentos dinamicamente.
+O projeto apresenta diferentes implementações para demonstrar a evolução e as possibilidades de organização do código:
+
+- **Implementação ingênua:** utiliza classes específicas para representar cada configuração de personagem.
+- **Implementação com Decorator:** utiliza o padrão Decorator para combinar comportamentos dinamicamente, sem criar uma classe específica para cada combinação.
+- **Implementação organizada em módulos:** separa as declarações das classes (`.h`) de suas implementações (`.cpp`), agrupando classes relacionadas.
+- **Implementação com classes separadas:** organiza cada classe individualmente, utilizando arquivos `.h` para declarações e `.cpp` para implementações.
 
 ## Estrutura do projeto
 
 ```text
 DecoratorJogo/
+├── .vscode/
+│   └── tasks.json
 ├── antes/
 │   └── main.cpp
 ├── depois/
 │   └── main.cpp
+├── modulos/
+│   ├── decorators.h
+│   ├── decorators.cpp
+│   ├── personagem.h
+│   ├── personagem.cpp
+│   └── main.cpp
+├── classes_separadas/
+│   ├── Personagem.h
+│   ├── Personagem.cpp
+│   ├── PersonagemBasico.h
+│   ├── PersonagemBasico.cpp
+│   ├── PersonagemDecorator.h
+│   ├── PersonagemDecorator.cpp
+│   ├── PocaoDecorator.h
+│   ├── PocaoDecorator.cpp
+│   ├── EspadaDecorator.h
+│   ├── EspadaDecorator.cpp
+│   ├── EncantamentoDecorator.h
+│   ├── EncantamentoDecorator.cpp
+│   └── main.cpp
+├── depois/
+│   └── main.cpp
+├── diagrama_slides/
+├── .gitattributes
+├── .gitignore
 └── README.md
 ```
 
-- `antes/`: contém a implementação ingênua.
-- `depois/`: contém a implementação utilizando o padrão Decorator.
+## Organização das pastas
+
+- `antes/`: contém a implementação ingênua, com as classes reunidas em um único arquivo.
+- `depois/`: contém a implementação utilizando o padrão Decorator, também organizada em um único arquivo.
+- `modulos/`: contém a implementação com as classes agrupadas em módulos, separando declarações e implementações.
+- `classes_separadas/`: contém a implementação com cada classe organizada individualmente em arquivos `.h` e `.cpp`.
+- `.vscode/`: contém o arquivo `tasks.json`, utilizado para configurar a compilação e execução das implementações pelo Visual Studio Code.
+- `diagrama_slides/`: contém os diagramas UML utilizados na apresentação do trabalho.
 
 ## Pré-requisitos
 
@@ -40,6 +78,8 @@ Para compilar e executar o projeto, é necessário ter:
 
 - Um compilador C++ (como o g++).
 - Um terminal para executar os comandos.
+- Visual Studio Code (opcional, recomendado para edição e execução).
+- Git (caso o projeto seja obtido por meio do GitHub).
 
 ## Como compilar e executar
 
@@ -73,3 +113,56 @@ Executar no Windows:
 .\depois\personagem.exe
 ```
 
+### 3. Implementação organizada em módulos
+
+Compilar:
+
+```bash
+g++ modulos/main.cpp modulos/personagem.cpp modulos/decorators.cpp -o modulos/personagem.exe
+```
+
+Executar no Windows:
+
+```powershell
+.\modulos\personagem.exe
+```
+
+### 4. Implementação com classes separadas
+
+Compilar:
+
+```bash
+g++ classes_separadas/Personagem.cpp classes_separadas/PersonagemBasico.cpp classes_separadas/PersonagemDecorator.cpp classes_separadas/PocaoDecorator.cpp classes_separadas/EspadaDecorator.cpp classes_separadas/EncantamentoDecorator.cpp classes_separadas/main.cpp -o classes_separadas/personagem.exe
+```
+
+Executar no Windows:
+
+```powershell
+.\classes_separadas\personagem.exe
+```
+
+## Execução pelo Visual Studio Code
+
+O projeto também possui uma configuração de tarefas no arquivo `.vscode/tasks.json`, permitindo compilar e executar as implementações organizadas em módulos e com classes separadas diretamente pelo Visual Studio Code.
+
+Para utilizar:
+
+1. Abrir a pasta do projeto no VS Code.
+2. Pressionar `Ctrl + Shift + P`.
+3. Pesquisar `Tasks: Run Task`.
+4. Selecionar a implementação desejada:
+   - `Decorator - Módulos`
+   - `Decorator - Classes Separadas`
+
+## Resultados esperados
+
+As implementações com Decorator apresentam os seguintes valores de poder de ataque:
+
+| Configuração | Poder de ataque |
+|---|---:|
+| Personagem básico | 10 |
+| Personagem com poção | 12 |
+| Personagem com poção e espada | 17 |
+| Personagem completo (poção, espada e encantamento) | 25 |
+
+As diferentes organizações do código mantêm a mesma lógica de funcionamento do padrão Decorator.
