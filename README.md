@@ -68,7 +68,7 @@ DecoratorJogo/
 - `modulos/`: contém a implementação com as classes agrupadas em módulos, separando declarações e implementações.
 - `separacao_classes/`: contém a implementação com cada classe organizada individualmente em arquivos `.h` e `.cpp`.
 - `.vscode/`: contém o arquivo `tasks.json`, utilizado para configurar a compilação e execução das implementações pelo Visual Studio Code.
-- `diagrama_slides/`: contém os diagramas UML utilizados na apresentação do trabalho.
+- `diagrama_slides/`: contém os diagramas UML utilizados na apresentação do trabalho e os slides da apresentação em PDF.
 
 ## Pré-requisitos
 
