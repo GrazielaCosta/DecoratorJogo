@@ -35,27 +35,27 @@ DecoratorJogo/
 │   └── main.cpp
 ├── depois/
 │   └── main.cpp
-├── modulos/
-│   ├── decorators.h
-│   ├── decorators.cpp
-│   ├── personagem.h
-│   ├── personagem.cpp
-│   └── main.cpp
-├── separacao_classes/
-│   ├── Personagem.h
-│   ├── Personagem.cpp
-│   ├── PersonagemBasico.h
-│   ├── PersonagemBasico.cpp
-│   ├── PersonagemDecorator.h
-│   ├── PersonagemDecorator.cpp
-│   ├── PocaoDecorator.h
-│   ├── PocaoDecorator.cpp
-│   ├── EspadaDecorator.h
-│   ├── EspadaDecorator.cpp
-│   ├── EncantamentoDecorator.h
-│   ├── EncantamentoDecorator.cpp
-│   └── main.cpp
 ├── diagrama_slides/
+├── modulos/
+│   ├── decorators.cpp
+│   ├── decorators.h
+│   ├── main.cpp
+│   ├── personagem.cpp
+│   └── personagem.h
+├── separacao_classes/
+│   ├── EncantamentoDecorator.cpp
+│   ├── EncantamentoDecorator.h
+│   ├── EspadaDecorator.cpp
+│   ├── EspadaDecorator.h
+│   ├── main.cpp
+│   ├── Personagem.cpp
+│   ├── Personagem.h
+│   ├── PersonagemBasico.cpp
+│   ├── PersonagemBasico.h
+│   ├── PersonagemDecorator.cpp
+│   ├── PersonagemDecorator.h
+│   ├── PocaoDecorator.cpp
+│   └── PocaoDecorator.h
 ├── .gitattributes
 ├── .gitignore
 └── README.md
@@ -63,12 +63,12 @@ DecoratorJogo/
 
 ## Organização das pastas
 
+- `.vscode/`: contém o arquivo `tasks.json`, utilizado para configurar a compilação e execução das implementações pelo Visual Studio Code.
 - `antes/`: contém a implementação ingênua, com as classes reunidas em um único arquivo.
 - `depois/`: contém a implementação utilizando o padrão Decorator, também organizada em um único arquivo.
+- `diagrama_slides/`: contém os diagramas UML utilizados na apresentação do trabalho e os slides da apresentação em PDF.
 - `modulos/`: contém a implementação com as classes agrupadas em módulos, separando declarações e implementações.
 - `separacao_classes/`: contém a implementação com cada classe organizada individualmente em arquivos `.h` e `.cpp`.
-- `.vscode/`: contém o arquivo `tasks.json`, utilizado para configurar a compilação e execução das implementações pelo Visual Studio Code.
-- `diagrama_slides/`: contém os diagramas UML utilizados na apresentação do trabalho e os slides da apresentação em PDF.
 
 ## Pré-requisitos
 
